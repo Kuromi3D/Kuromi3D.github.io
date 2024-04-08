@@ -1,0 +1,304 @@
+* {
+  text-decoration: none;
+}
+
+p. {
+  font-weight: bold;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Hi Melody", sans-serif;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+        /*background-color: #f7f7f7; /* Color de fondo suave */
+    }
+ 
+.content {
+        max-width: 800px; /* Ancho máximo del contenido */
+        margin: 0 auto; /* Centrar el contenido en la página */
+        padding: 20px; /* Espaciado interior */
+      }
+      
+.alegre {
+        color: #ff6f61; /* Color de texto vibrante */
+        font-size: 50px; /* Tamaño de fuente legible */
+        line-height: 1; /* Espaciado entre líneas cómodo */
+      }
+
+header img {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    }
+
+.header-image {
+    float: flex; /* La imagen se colocará a la izquierda del texto */
+    margin-right: 20px; /* Margen a la derecha para separar la imagen del texto */
+    border-radius: 5px; /* Esquinas redondeadas para la imagen (opcional) */
+    }
+
+    .marquee-container {
+        max-width: 80%; /* Ancho máximo del contenedor */
+        overflow: hidden; /* Oculta el desbordamiento del texto */
+        margin: 0 auto; /* Centrar el contenedor */
+      }
+      
+    .marquee {
+        white-space: nowrap;
+        overflow: hidden;
+        animation: marquee 5s linear infinite;
+        font-family: "Hi Melody", sans-serif;
+      }
+      
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+          color: rgb(252, 0, 231); /* Color inicial (rojo) */
+        }
+        100% {
+          transform: translateX(-100%);
+          color: rgb(190, 0, 0); /* Color final (verde) */
+        }
+      }
+
+
+
+.hi-melody-regular {
+        font-family: "Hi Melody", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    
+/* estas lineas son el efecto de transparencia de la imagen */
+
+.custom-section {
+        padding: 30px;
+        border: 1px solid #ffffff;
+        margin-bottom: 30px;
+        text-align: justify;
+         /* Espaciado entre líneas cómodo */
+      }
+
+      article {
+        position: center;
+        width: 300px;
+        transition: all 0.3s ease;
+      }
+      
+      article img:first-child {
+        box-shadow: 0 60px 60px -60x rgba(0, 30, 255, 0.5);
+        border-radius: 4px;
+        object-fit: cover;
+        width: 100%;
+        position: center;
+      }
+      
+      article img:last-child {
+        position: absolute;
+        width: 200px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform: translateY(25%);
+        transition: 0.3s ease;
+        opacity: 0;
+      }
+      
+      article:hover {
+        transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+      }
+      
+      article::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(
+          to bottom,
+          transparent 10%,
+          rgba(0, 0, 0, 0.5) 50%,
+          rgba(0, 0, 0) 95%
+        );
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+      
+      article:hover::before {
+        opacity: 1;
+      }
+      
+      article:hover img:last-child {
+        opacity: 1;
+        transform: translateY(10%);
+      }
+    
+
+
+/* Lista de productos */
+
+  .product {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .product img {
+      width: 300px;
+      height: 350px;
+      margin-right: 10px;
+    }
+    .product-details {
+      flex: 1;
+    }
+    .product-title {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    .product-price {
+      font-size: 16px;
+      color: #888;
+    }
+
+  
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+    }
+    
+    .slide {
+      flex: 0 0 auto;
+      width: 300px; /* Ajusta el ancho de cada slide según tu diseño */
+      padding: 20px;
+      margin-right: 20px;
+      scroll-snap-align: start;
+      border: 1px solid #ccc;
+    }
+    
+    .slide img {
+      max-width: block; /* Ajustar la imagen al ancho del contenedor */
+      height: flex; /* Mantener la proporción de aspecto de la imagen */
+    }
+    
+    
+    .slide h3 {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+    
+    .slide p {
+      font-size: 0.9em;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: hidden;
+      scroll-snap-type: x mandatory;
+      justify-content: center; /* Centrar el contenido horizontalmente */
+      width: 100%;
+      height: auto;
+    }
+    
+    .slide {
+      flex: 0 0 auto;
+      width: 100%; /* Ancho del carrusel ocupará el 100% del contenedor */
+      padding: 20px;
+      scroll-snap-align: start;
+      border: 1px solid #ccc;
+      display: none; /* Ocultar todos los elementos */
+    }
+    
+    .slide.active {
+      display: block; /* Mostrar solo el elemento activo */
+      background-color: #fffdfd; /* Cambiar el color de fondo del elemento activo */
+      border: 2px solid #ffffff; /* Añadir un borde al elemento activo */
+      border-radius: 5px; /* Redondear las esquinas del borde */
+    }
+    
+    .slide img {
+      max-width: 100%; /* Ajustar la imagen al ancho del contenedor */
+    }
+    
+    #prevBtn, #nextBtn {
+      margin-top: 10px;
+    }
+    
+    
+    .boton {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      
+    }
+  
+    /* Estilos para cambiar el cursor al pasar por encima */
+    .boton:hover {
+      background-color: #0056b3;
+    }
+    
+/* Estilo básico del botón */
+.my-button {
+  background-color: #4CAF50; /* Color de fondo predeterminado */
+  color: white; /* Color del texto predeterminado */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Borde sin contorno */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  text-align: center; /* Centra el texto horizontalmente */
+  text-decoration: none; /* Quita el subrayado predeterminado */
+  display: inline-block; /* Hace que el botón se comporte como un bloque en línea */
+  font-size: 20px; /* Tamaño de fuente */
+  margin: 10px; /* Margen exterior */
+  transition-duration: 0.4s; /* Duración de la transición */
+}
+
+/* Estilo de botón al pasar el mouse */
+.my-button:hover {
+  background-color: #45a049; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Estilo de botón al hacer clic */
+.my-button:active {
+  background-color: #367636; /* Cambia el color de fondo al hacer clic */
+}
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.fa-whatsapp {
+  color: green; /* Change the color as desired */
+  z-index: 9999;
+}
+
+/* Optional: Add animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.fa-bounce {
+  animation: bounce 2s infinite;
+  z-index: 9999;
+}
+
