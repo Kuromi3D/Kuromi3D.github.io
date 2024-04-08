@@ -1,10 +1,15 @@
 * {
   text-decoration: none;
+  background-color: black;
+  color: whitesmoke;
 }
 
-p. {
-  font-weight: bold;
+video {
+  width: 100%;
+  height: auto;
 }
+
+
 body {
     margin: 0;
     padding: 0;
@@ -75,7 +80,7 @@ header img {
 
 .custom-section {
         padding: 30px;
-        border: 1px solid #ffffff;
+        border: 1px solid #000000;
         margin-bottom: 30px;
         text-align: justify;
          /* Espaciado entre líneas cómodo */
@@ -175,7 +180,7 @@ header img {
       padding: 20px;
       margin-right: 20px;
       scroll-snap-align: start;
-      border: 1px solid #ccc;
+      border: 1px solid #000000;
     }
     
     .slide img {
@@ -213,8 +218,8 @@ header img {
     
     .slide.active {
       display: block; /* Mostrar solo el elemento activo */
-      background-color: #fffdfd; /* Cambiar el color de fondo del elemento activo */
-      border: 2px solid #ffffff; /* Añadir un borde al elemento activo */
+      background-color: #000000; /* Cambiar el color de fondo del elemento activo */
+      border: 2px solid #070707; /* Añadir un borde al elemento activo */
       border-radius: 5px; /* Redondear las esquinas del borde */
     }
     
@@ -224,6 +229,8 @@ header img {
     
     #prevBtn, #nextBtn {
       margin-top: 10px;
+      background-color: #030303;
+      color: whitesmoke;
     }
     
     
@@ -236,7 +243,7 @@ header img {
       border-radius: 5px;
       border: none;
       cursor: pointer;
-      font-size: 20px;
+      font-size: 30px;
       
     }
   
@@ -248,7 +255,7 @@ header img {
 /* Estilo básico del botón */
 .my-button {
   background-color: #4CAF50; /* Color de fondo predeterminado */
-  color: white; /* Color del texto predeterminado */
+  color: rgb(3, 3, 3); /* Color del texto predeterminado */
   padding: 10px 20px; /* Espaciado interno */
   border: none; /* Borde sin contorno */
   border-radius: 5px; /* Bordes redondeados */
@@ -256,19 +263,19 @@ header img {
   text-align: center; /* Centra el texto horizontalmente */
   text-decoration: none; /* Quita el subrayado predeterminado */
   display: inline-block; /* Hace que el botón se comporte como un bloque en línea */
-  font-size: 20px; /* Tamaño de fuente */
+  font-size: 30px; /* Tamaño de fuente */
   margin: 10px; /* Margen exterior */
   transition-duration: 0.4s; /* Duración de la transición */
 }
 
 /* Estilo de botón al pasar el mouse */
 .my-button:hover {
-  background-color: #45a049; /* Cambia el color de fondo al pasar el mouse */
+  background-color: #ff0000; /* Cambia el color de fondo al pasar el mouse */
 }
 
 /* Estilo de botón al hacer clic */
 .my-button:active {
-  background-color: #367636; /* Cambia el color de fondo al hacer clic */
+  background-color: #7541f0; /* Cambia el color de fondo al hacer clic */
 }
 
 
