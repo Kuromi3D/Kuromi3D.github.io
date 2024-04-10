@@ -1,7 +1,25 @@
+.fuente3{
+  font-family: "Hi Melody", sans-serif;
+  color: rgba(146, 64, 194, 0);
+  font-size: 2em;
+}
+
+.fuente2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #000000;
+  font-size: 2em;
+}
+
+
+
 * {
   text-decoration: none;
-  background-color: black;
-  color: whitesmoke;
+  /* background-color: ; */
+  color: rgb(0, 0, 0);
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  /* font-family: "Hi Melody", sans-serif; */
 }
 
 video {
@@ -11,25 +29,30 @@ video {
 
 
 body {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: "Hi Melody", sans-serif;
+    /* font-family: "Hi Melody", sans-serif; */
     text-align: center;
-    font-size: 30px;
+    /* font-size: 20px; */
     text-decoration: none;
         /*background-color: #f7f7f7; /* Color de fondo suave */
     }
  
 .content {
-        max-width: 800px; /* Ancho máximo del contenido */
-        margin: 0 auto; /* Centrar el contenido en la página */
+        max-width: auto; /* Ancho máximo del contenido */
+        margin: auto; /* Centrar el contenido en la página */
         padding: 20px; /* Espaciado interior */
       }
       
 .alegre {
         color: #ff6f61; /* Color de texto vibrante */
-        font-size: 50px; /* Tamaño de fuente legible */
+        font-size: 2em; /* Tamaño de fuente legible */
         line-height: 1; /* Espaciado entre líneas cómodo */
+        font-family: "Hi Melody", sans-serif;
       }
 
 header img {
@@ -47,7 +70,9 @@ header img {
     .marquee-container {
         max-width: 80%; /* Ancho máximo del contenedor */
         overflow: hidden; /* Oculta el desbordamiento del texto */
-        margin: 0 auto; /* Centrar el contenedor */
+        margin: auto; /* Centrar el contenedor */
+        width: auto;
+        height: auto;
       }
       
     .marquee {
@@ -72,7 +97,7 @@ header img {
 
 .hi-melody-regular {
         font-family: "Hi Melody", sans-serif;
-        font-weight: 400;
+        font-weight: 300;
         font-style: normal;
       }
     
@@ -307,5 +332,139 @@ header img {
 .fa-bounce {
   animation: bounce 2s infinite;
   z-index: 9999;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas responsivas */
+  grid-gap: 10px; /* Espacio entre las imágenes */
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+.box {
+  width: auto;
+}
+
+.box img {
+  max-width: 100%;
+  width: 100%;
+  height: auto; /* ajusta según sea necesario: auto, 100%, etc. */
+  margin: 0 auto;
+}
+
+
+
+ul {
+  padding-top: 5%;
+  position: relative;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+  transition: 0.5s;
+}
+
+ul li:hover {
+  width: 180px;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0);
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  background: linear-gradient(45deg, var(--i), var(--j)); /* corrige el formato del gradiente */
+  opacity: 0;
+  transition: 0.5s;
+}
+
+ul li:hover::before {
+  opacity: 1;
+}
+
+ul li::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 60px;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  opacity: 0;
+  transition: 0.5s;
+  z-index: -1;
+  filter: blur(15px);
+}
+
+ul li:hover::after {
+  opacity: 0.5;
+}
+
+ul li i {
+  position: center;
+  color: #943e7e;
+  font-size: 2.75em;
+  transition: transform 0.5s, font-size 0.5s, opacity 0.5s; /* combina todas las transiciones */
+  transition-delay: 0.25s;
+}
+
+ul li:hover i {
+  transform: scale(0);
+  font-size: 2.75em;
+  opacity: 0; /* añade transición de opacidad */
+}
+
+ul li span {
+  position: absolute;
+}
+
+ul li .titulo {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  font-size: 0.7em;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.1em;
+  transform: scale(0);
+  transition: transform 0.5s, transition-delay 0.5s; /* combina las transiciones */
+  transition-delay: 0s;
+}
+
+ul li:hover .titulo {
+  transform: scale(1);
+}
+
+
+footer {
+  background-color: #ffffff; /* Color de fondo del footer */
+  color: rgb(0, 0, 0); /* Color del texto */
+  padding: 10px; /* Espacio interior */
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+
+.footer-section {
+  background-color: rgb(255, 255, 255); /* Color de fondo del sector del footer */
+  padding: 10px; /* Espacio interior */
+  padding-bottom: 5%;
+  padding-top: 5%;
 }
 
