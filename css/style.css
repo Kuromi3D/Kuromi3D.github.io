@@ -1,8 +1,4 @@
-.fuente3{
-  font-family: "Hi Melody", sans-serif;
-  color: rgba(146, 64, 194, 0);
-  font-size: 2em;
-}
+
 
 .fuente2{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -40,6 +36,9 @@ body {
     /* font-size: 20px; */
     text-decoration: none;
         /*background-color: #f7f7f7; /* Color de fondo suave */
+    background-image: url('../img/fondo.jpg') ;
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el elemento */
+    background-position: center; /* Centra la imagen en el elemento */
     }
  
 .content {
@@ -343,6 +342,7 @@ header img {
 .grid-item img {
   width: 100%;
   height: auto;
+  filter: drop-shadow(5px 5px 10px #000);
 }
 
 
@@ -438,9 +438,9 @@ ul li span {
 }
 
 ul li .titulo {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #000000;
-  font-size: 0.7em;
+  font-size: 1,5em;
   /* text-transform: uppercase; */
   letter-spacing: 0.1em;
   transform: scale(0);
@@ -454,7 +454,7 @@ ul li:hover .titulo {
 
 
 footer {
-  background-color: #ffffff; /* Color de fondo del footer */
+ 
   color: rgb(0, 0, 0); /* Color del texto */
   padding: 10px; /* Espacio interior */
   font-family: 'Times New Roman', Times, serif;
@@ -462,9 +462,33 @@ footer {
 }
 
 .footer-section {
-  background-color: rgb(255, 255, 255); /* Color de fondo del sector del footer */
-  padding: 10px; /* Espacio interior */
+  
+  padding: 5px; /* Espacio interior */
   padding-bottom: 5%;
   padding-top: 5%;
 }
 
+
+.instagram-icon1 {
+  color: #81296b;
+}
+
+.instagram-icon2 {
+  color: #be2f3b;
+}
+
+
+.facebook-icon {
+  color: blue;
+}
+
+.cults-icon {
+  color: #007bff;
+}
+
+.fuente3{
+  font-family: "Hi Melody", sans-serif;
+  color: red;
+  font-size: 2em;
+  filter: drop-shadow(2px 2px 2px #000 );
+}
